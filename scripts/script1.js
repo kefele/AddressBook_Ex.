@@ -7,17 +7,14 @@ class AddressBook {
 
     add(info) {
         this.contacts.push(info);
-    };
+    }
+
     printAll(info) {
-        for (let i = 0; i < AddressBook.length; i++) {
-            console.log([i]);
+        let contactsLen = this.contacts.length;
+        for (let i = 0; i < contactsLen; i++) {            
+            console.log(this.contacts[i]);
         }
-    };
-
-
-
-
-    
+    }
     // upDate();
 }
 class Contact {
@@ -28,7 +25,7 @@ class Contact {
         this.email = email;
         this.relation = relation;
     }
-
+  
 }
 
 // const book = new AddressBook();
@@ -37,4 +34,4 @@ book.add(new Contact("Jonathon", "3137892345", "jonB@yahoo.com", "Myself"));
 // const contact2 = new AddressBook();
 book.add(new Contact("Josh", "3135670098", "joshC@aol.com", "friend"))
 console.log(book);
-printAll();
+book.printAll();
