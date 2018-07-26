@@ -7,6 +7,7 @@ class AddressBook {
 
     add(info) {
         this.contacts.push(info);
+        console.log(book);
     }
 
     printAll(info) {
@@ -38,6 +39,23 @@ const book = new AddressBook();
 book.add(new Contact("Jonathon", "3137892345", "jonB@yahoo.com", "Myself"));
 book.add(new Contact("Josh", "3135670098", "joshC@aol.com", "friend"))
 console.log(book);
+
+do{
+    const select = prompt("Would You Like To (A)dd, (D)elete, (P)rint Or (Q)uit? (A/D/P/Q)");
+    switch (select.toLocaleLowerCase()){
+        case "a": this.name = newName;
+                  this.phone = newPhone;
+                  this.email = newEmail;
+                  this.relation = newRelation;
+                  newName = prompt("Enter New Contact (Name).");
+                  newPhone = prompt("Enter New Contact (Phone).");
+                  newEmail = prompt("Enter New Contact (Email).");
+                  newRelation = prompt("Enter New Contact (Relation).");
+                  add();
+
+    }
+}
+while(select !== "Q")
 book.printAll();
 book.deleteAt();
 book.printAll();
