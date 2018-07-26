@@ -15,6 +15,12 @@ class AddressBook {
             console.log(this.contacts[i]);
         }
     }
+
+    deleteAt(index) {
+        index = prompt("Enter Index Number To Delete ")
+        this.contacts.splice(index,1);
+    }
+
     // upDate();
 }
 class Contact {
@@ -28,10 +34,10 @@ class Contact {
   
 }
 
-// const book = new AddressBook();
 const book = new AddressBook();
 book.add(new Contact("Jonathon", "3137892345", "jonB@yahoo.com", "Myself"));
-// const contact2 = new AddressBook();
 book.add(new Contact("Josh", "3135670098", "joshC@aol.com", "friend"))
 console.log(book);
+book.printAll();
+book.deleteAt();
 book.printAll();
